@@ -33,17 +33,17 @@ typedef struct PRICE_ENTRY {
 //SHFE-SUB structure
 typedef struct SHFE_SUB
 {
-        uint16_t changeno;                      ///2  <会话编号
-        uint16_t ins_no;                        ///4  <合约编号
+        uint32_t changeno;                      ///4  <会话编号
         uint32_t snap_time;                     ///8  <行情产生时间
         uint16_t snap_millisec;                 ///10 <行情产生时间
-        char     ins_id[8];                     ///18 <合约名字
-        uint32_t last_price100;                 ///22 <最新价 x 100
-        uint32_t volume;                        ///26 <最新总成交量
-        uint64_t turnover100;                   ///34 <成交金额
-        uint32_t open_interest_u;               ///38 <持仓量
-        PRICE_ENTRY_S  bid_list[5];             ///68
-        PRICE_ENTRY_S  ask_list[5];             ///98
+        uint16_t ins_no;                        ///12  <合约编号
+        char     ins_id[8];                     ///20 <合约名字
+        uint32_t last_price100;                 ///24 <最新价 x 100
+        uint32_t volume;                        ///28 <最新总成交量
+        uint64_t turnover100;                   ///36 <成交金额
+        uint32_t open_interest_u;               ///40 <持仓量
+        PRICE_ENTRY_S  bid_list[5];             ///70
+        PRICE_ENTRY_S  ask_list[5];             ///100
 } __attribute__((packed)) SHFE_SUB_S;
 
 //total gaps
