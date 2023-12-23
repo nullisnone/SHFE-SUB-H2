@@ -22,7 +22,7 @@
 #define PAYLOAD_OFFSET			42
 #define IPV4_PACKET                     0x0008
 #define DOT1Q_FRAME                     0x0081
-#define DST_IP_FILTER 			0xefefef09	//239.239.239.8 is DST IP we want to read
+#define DST_IP_FILTER 			0xefefef09	//239.239.239.9 is DST IP we want to read
 
 //Define price entry
 typedef struct PRICE_ENTRY {
