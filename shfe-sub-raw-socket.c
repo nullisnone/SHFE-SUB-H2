@@ -190,7 +190,7 @@ int main(int argc, char** argv)
                 prev_ip_id = last_ip_id;
 
                 SHFE_SUB_S *deep = (SHFE_SUB_S *)(packet_buf + dot1q_offset + PAYLOAD_OFFSET);
-                if((uint16_t)(changenos[deep->ins_no]+0x0001)!=deep->changeno && changenos[deep->ins_no]!=0)
+                if((uint32_t)(changenos[deep->ins_no]+0x0001)!=deep->changeno && changenos[deep->ins_no]!=0)
                 {
                         total_changeno_gap += deep->changeno - changenos[deep->ins_no] -1;
                         printf("<GAP_changeno> changeno gap previous/latest/total: %d/%d/%d \n", changenos[deep->ins_no], deep->changeno, total_changeno_gap);
