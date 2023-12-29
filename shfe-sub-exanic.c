@@ -26,7 +26,7 @@
 
 //Define price entry
 typedef struct PRICE_ENTRY {
-        uint32_t price100;
+        uint32_t price100;			//价格 x 100
         uint16_t volume;
 } __attribute__((packed)) PRICE_ENTRY_S;
 
@@ -40,7 +40,7 @@ typedef struct SHFE_SUB
         char     ins_id[8];                     ///20 <合约名字
         uint32_t last_price100;                 ///24 <最新价 x 100
         uint32_t volume;                        ///28 <最新总成交量
-        uint64_t turnover100;                   ///36 <成交金额
+        uint64_t turnover100;                   ///36 <成交金额 x 100
         uint32_t open_interest_u;               ///40 <持仓量
         PRICE_ENTRY_S  bid_list[5];             ///70
         PRICE_ENTRY_S  ask_list[5];             ///100
